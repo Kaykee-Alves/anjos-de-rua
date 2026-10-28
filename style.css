@@ -77,8 +77,8 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     color: #ffffff;
-    padding: 16px;
-    margin-top: 60px;
+    padding: 0 1rem;
+    margin-top: 60px; 
 }
 
 .conteudo-destaque h1 {
@@ -400,16 +400,26 @@ footer {
 
 /* Responsividade para Dispositivos Móveis (Celulares e Tablets) */
 @media (max-width: 768px) {
-    .conteudo {
-        padding: 15px;
+    .bloco-sobre, 
+    .conteudo-contato {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        display: none;
+    }
+    
+    .conteudo-destaque h1 {
+        font-size: 2.2rem;
     }
 
-    .titulo-secao {
-        font-size: 24px;
+   
+    header .conteudo {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0.5rem 0;
     }
-
-    /* Empilha os cartões um abaixo do outro no telemóvel */
-    .grade-galeria, .grade-projetos, .grade-impacto {
-        grid-template-columns: 1fr;
-    }
+    
+    .destaque {
+        margin-top: 140px; 
 }
