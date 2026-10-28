@@ -398,55 +398,34 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Responsividade para Dispositivos Móveis */
+
 
 @media (max-width: 768px) {
-    /* Cabeçalho empilhado de forma compacta */
-    header .conteudo {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.4rem 0.5rem;
-        gap: 5px;
-    }
-
-    .logotipo {
-        font-size: 1.1rem;
-    }
-
-    /* Menu compacto em linha horizontal com quebra controlada */
-    nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 12px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-
-    nav ul li a {
-        font-size: 0.75rem; /* Letras menores para caberem confortavelmente */
-        padding: 2px 4px;
-    }
-
-    /* Ajusta a margem do banner para dar espaço exato ao cabeçalho compacto */
-    .destaque {
-        margin-top: 110px; 
-    }
-
-    .conteudo-destaque h1 {
-        font-size: 1.8rem;
-    }
-
-    /* Corrige o alinhamento das secções e caixas no telemóvel */
-    .bloco-sobre, 
-    .conteudo-contato {
-        flex-direction: column;
-    }
-
+    /* Faz com que as caixas principais ocupem quase a largura total da tela do telemóvel */
     .caixa-secao {
-        padding: 1.5rem 1rem;
-        margin: 0 10px;
-        box-sizing: border-box;
+        width: 92% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px auto !important;
+        padding: 1.5rem 0.8rem !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Corrige a grade interna para que os cartões e itens fiquem empilhados e centralizados */
+    .grade-ajuda, 
+    .galeria-imagens, 
+    .cards-impacto {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    /* Garante que os cartões individuais ocupem o espaço adequado sem estourar o layout */
+    .caixa-ajuda, 
+    .cartao-impacto, 
+    .card-galeria {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
