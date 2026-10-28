@@ -399,33 +399,98 @@ footer {
 }
 
 
-
+/* Responsividade Definitiva para Telemóveis */
 @media (max-width: 768px) {
-    /* Faz com que as caixas principais ocupem quase a largura total da tela do telemóvel */
-    .caixa-secao {
-        width: 92% !important;
-        max-width: 100% !important;
-        margin: 0 auto 20px auto !important;
-        padding: 1.5rem 0.8rem !important;
-        box-sizing: border-box !important;
+    /* 1. Cabeçalho fixo e compacto */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Corrige a grade interna para que os cartões e itens fiquem empilhados e centralizados */
+    header .conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 10px;
+        gap: 4px;
+    }
+
+    .logotipo {
+        font-size: 1rem;
+    }
+
+    /* Menu horizontal compacto que cabe no telemóvel */
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px 10px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 2px 4px;
+        white-space: nowrap;
+    }
+
+    /* 2. Banner principal ajustado para não ficar cortado */
+    .destaque {
+        margin-top: 105px; /* Altura ideal para compensar o cabeçalho fixo */
+        height: 85vh;
+        padding: 0 1rem;
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 1.8rem;
+    }
+
+    /* 3. Expande as caixas para preencher toda a largura do telemóvel */
+    .container, 
+    .caixa-secao, 
+    .bloco-sobre, 
+    .conteudo-contato {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        border-radius: 0 !important; /* Retira as bordas arredondadas exageradas nas pontas do telemóvel */
+    }
+
+    /* 4. Corrige o alinhamento interno de grades e cartões */
     .grade-ajuda, 
     .galeria-imagens, 
     .cards-impacto {
-        width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
+        width: 100% !important;
         align-items: center !important;
         gap: 15px !important;
     }
 
-    /* Garante que os cartões individuais ocupem o espaço adequado sem estourar o layout */
     .caixa-ajuda, 
     .cartao-impacto, 
     .card-galeria {
         width: 100% !important;
         max-width: 100% !important;
+    }
+
+    /* 5. Corrige os botões de redes sociais para não estolarem a caixa de contato */
+    .conteudo-contato, 
+    .redes-sociais, 
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
