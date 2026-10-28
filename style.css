@@ -399,28 +399,54 @@ footer {
 }
 
 /* Responsividade para Dispositivos Móveis */
+
 @media (max-width: 768px) {
+    /* Cabeçalho empilhado de forma compacta */
+    header .conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.4rem 0.5rem;
+        gap: 5px;
+    }
+
+    .logotipo {
+        font-size: 1.1rem;
+    }
+
+    /* Menu compacto em linha horizontal com quebra controlada */
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 0.75rem; /* Letras menores para caberem confortavelmente */
+        padding: 2px 4px;
+    }
+
+    /* Ajusta a margem do banner para dar espaço exato ao cabeçalho compacto */
+    .destaque {
+        margin-top: 110px; 
+    }
+
+    .conteudo-destaque h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Corrige o alinhamento das secções e caixas no telemóvel */
     .bloco-sobre, 
     .conteudo-contato {
         flex-direction: column;
     }
-    
-    nav ul {
-        display: none;
-    }
-    
-    .conteudo-destaque h1 {
-        font-size: 2.2rem;
-    }
 
-    /* Adicione estas duas regras aqui dentro */
-    header .conteudo {
-        flex-direction: column;
-        gap: 10px;
-        padding: 0.5rem 0;
-    }
-    
-    .destaque {
-        margin-top: 140px; /* Garante que o banner desce no telemóvel e não corta o texto */
+    .caixa-secao {
+        padding: 1.5rem 1rem;
+        margin: 0 10px;
+        box-sizing: border-box;
     }
 }
