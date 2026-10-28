@@ -398,7 +398,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Responsividade para Dispositivos Móveis (Celulares e Tablets) */
+/* Responsividade para Dispositivos Móveis */
 @media (max-width: 768px) {
     .bloco-sobre, 
     .conteudo-contato {
@@ -413,7 +413,7 @@ footer {
         font-size: 2.2rem;
     }
 
-   
+    /* Adicione estas duas regras aqui dentro */
     header .conteudo {
         flex-direction: column;
         gap: 10px;
@@ -421,5 +421,6 @@ footer {
     }
     
     .destaque {
-        margin-top: 140px; 
+        margin-top: 140px; /* Garante que o banner desce no telemóvel e não corta o texto */
+    }
 }
