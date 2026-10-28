@@ -397,3 +397,28 @@ footer {
 .link-cartao:hover {
     transform: translateY(-5px);
 }
+
+/* Responsividade para Dispositivos Móveis (Celulares e Tablets) */
+@media (max-width: 768px) {
+    
+    /* Ajusta o espaçamento geral das seções para não sobrar muito espaço nas laterais */
+    .conteudo {
+        padding: 12px;
+    }
+
+    /* Permite que o menu do topo se ajuste melhor ou quebre linhas se necessário */
+    header .conteudo {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Reduz um pouco o tamanho dos títulos principais em telas pequenas */
+    .titulo-secao {
+        font-size: 24px;
+    }
+
+    /* Garante que os cartões (galeria, projetos, impacto) ocupem a largura ideal no celular */
+    .grade-galeria, .grade-projetos, .grade-impacto {
+        grid-template-columns: 1fr; /* Fica um cartão abaixo do outro no celular */
+    }
+}
