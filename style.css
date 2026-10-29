@@ -399,98 +399,145 @@ footer {
 }
 
 
-/* Responsividade Definitiva para Telemóveis */
-@media (max-width: 768px) {
-    /* 1. Cabeçalho fixo e compacto */
+/* Layout para celulares */
+@media screen and (max-width: 768px) {
+
+    /* Cabeçalho e menu */
     header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: relative;
     }
 
     header .conteudo {
         flex-direction: column;
-        align-items: center;
-        padding: 6px 10px;
-        gap: 4px;
+        padding: 12px;
+        gap: 12px;
     }
 
-    .logotipo {
-        font-size: 1rem;
+    .logotipo img {
+        height: 55px;
     }
 
-    /* Menu horizontal compacto que cabe no telemóvel */
+    nav {
+        width: 100%;
+    }
+
     nav ul {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 6px 10px;
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        gap: 10px;
     }
 
     nav ul li a {
-        font-size: 0.7rem;
-        padding: 2px 4px;
-        white-space: nowrap;
+        font-size: 13px;
     }
 
-    /* 2. Banner principal ajustado para não ficar cortado */
+    /* Página inicial */
     .destaque {
-        margin-top: 105px; /* Altura ideal para compensar o cabeçalho fixo */
-        height: 85vh;
-        padding: 0 1rem;
+        height: auto;
+        min-height: 75vh;
+        margin-top: 0;
+        padding: 70px 20px;
     }
 
     .conteudo-destaque h1 {
-        font-size: 1.8rem;
+        font-size: 30px;
+        line-height: 1.3;
     }
 
-    /* 3. Expande as caixas para preencher toda a largura do telemóvel */
-    .container, 
-    .caixa-secao, 
-    .bloco-sobre, 
-    .conteudo-contato {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        box-sizing: border-box !important;
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-        border-radius: 0 !important; /* Retira as bordas arredondadas exageradas nas pontas do telemóvel */
+    .conteudo-destaque p {
+        font-size: 16px;
     }
 
-    /* 4. Corrige o alinhamento interno de grades e cartões */
-    .grade-ajuda, 
-    .galeria-imagens, 
-    .cards-impacto {
-        display: flex !important;
-        flex-direction: column !important;
-        width: 100% !important;
-        align-items: center !important;
-        gap: 15px !important;
+    .botao {
+        padding: 14px 24px;
+        font-size: 15px;
     }
 
-    .caixa-ajuda, 
-    .cartao-impacto, 
-    .card-galeria {
-        width: 100% !important;
-        max-width: 100% !important;
+    /* Espaçamento das seções */
+    .espacamento-secao {
+        padding: 20px 12px;
     }
 
-    /* 5. Corrige os botões de redes sociais para não estolarem a caixa de contato */
-    .conteudo-contato, 
-    .redes-sociais, 
-    footer {
-        display: flex;
+    .caixa-secao {
+        padding: 24px 16px;
+    }
+
+    .titulo-secao {
+        font-size: 26px;
+    }
+
+    /* Sobre a ONG */
+    .bloco-sobre {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .texto-sobre,
+    .imagem-sobre {
+        width: 100%;
+    }
+
+    .imagem-sobre img {
+        height: auto;
+        max-height: 320px;
+    }
+
+    /* Projetos */
+    .grade-projetos {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        gap: 20px;
+    }
+
+    .cartao {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Impacto */
+    .grade-impacto {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Galeria */
+    .grade-galeria {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .item-galeria img {
+        height: 230px;
+    }
+
+    /* Requisitos e como ajudar */
+    .grade-ajuda {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .cartao-ajuda {
+        width: 100%;
+        max-width: 400px;
+        padding: 25px 20px;
+    }
+
+    /* Contato */
+    .conteudo-contato {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .redes-sociais a {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    /* Rodapé */
+    footer {
+        padding: 24px 16px;
+        font-size: 13px;
     }
 }
